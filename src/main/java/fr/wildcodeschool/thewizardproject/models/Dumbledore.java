@@ -1,12 +1,9 @@
 package fr.wildcodeschool.thewizardproject.models;
 
+import org.springframework.stereotype.Component;
+
+@Component("theDumb")
 public class Dumbledore implements WizardInterface{
-
-    private Outfit outfit;
-
-    public Dumbledore(Outfit theOutfit) {
-        outfit = theOutfit;
-    }
 
     @Override
     public String giveAdvice() {
@@ -15,6 +12,6 @@ public class Dumbledore implements WizardInterface{
 
     @Override
     public String changeDress() {
-        return this.outfit.dress();
+        return "The dress was grey";
     }
 }

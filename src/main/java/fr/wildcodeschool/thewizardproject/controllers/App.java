@@ -7,10 +7,14 @@ public class App {
 
     public void start() {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:applicationContext.xml");
-        WizardInterface myWiz = context.getBean("gandalf", WizardInterface.class);
+        WizardInterface myGand = context.getBean("theGand", WizardInterface.class);
+        WizardInterface myDumb = context.getBean("theDumb", WizardInterface.class);
         context.close();
-        System.out.println(myWiz.changeDress());
-        System.out.println(myWiz.giveAdvice());
+        System.out.println(myGand.changeDress());
+        System.out.println(myGand.giveAdvice());
+
+        System.out.println(myDumb.changeDress());
+        System.out.println(myDumb.giveAdvice());
 
 
     }
